@@ -1,0 +1,22 @@
+
+##exportPattern("^[^\\.]")
+export(adoption, GoldenbergDistance, VarDistance) ##, Goldenberg_C)
+
+
+import("graphics")
+import("methods")
+import("grDevices")
+import("stats")
+import("quadprog")
+import("tcltk"); import("tkrplot")
+
+##import("utils")
+# importFrom('RandomFields', RFsimulate, RMfbm, R.p)
+importFrom('RandomFieldsUtils', Print, RFoptions, sleep.micro, sleep.milli)
+# importFrom('RandomFields', RFsimulate)
+
+
+useDynLib(adoption, .registration = TRUE, .fixes = "C_")
+
+S3method(print, adoption)
+S3method(str, adoption)
