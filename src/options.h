@@ -24,10 +24,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef adoption_options_H
 #define adoption_options_H 1
 
-#include <Basic_utils.h>
-
-extern int CORES;
-
 #define adoptionN 25
 #define nchar 255
 typedef struct adoption_param {
@@ -51,11 +47,8 @@ typedef struct adoption_param {
 typedef struct globalparam{
   adoption_param adoption;
 } globalparam;
-extern globalparam GLOBAL;
 
 #define prefixN 1
-extern const char * prefixlist[prefixN], **all[prefixN];
-extern int allN[prefixN];
 void setparameter(int i, int j, SEXP el, char name[200], bool isList);
 void getRFoptions(SEXP *sublist);
 void finalparameter();

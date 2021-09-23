@@ -19,10 +19,19 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.  
 */
 
+#include <Basic_utils.h>
 #include <R_ext/Lapack.h>
-//#include "def.h" // never change this line
 #include <General_utils.h> //#include <General_utils.h>
+#include <zzz_RandomFieldsUtils.h>
 #include "xport_import.h"
+#include "options.h"
+#include "extern.h"
+#ifdef CALL
+#undef CALL
+#endif
+#define CALL(what) extern what##_type Ext_##what
+UTILSCALLS;
+
 
 
 #define SCALAR(A,B,C) Ext_scalarX(A,B,C, SCALAR_AVX)
@@ -41,6 +50,7 @@ void AtA(double *a, int nrow, int ncol, double *C) {
   // C =  A^T %*% A
 #ifdef DO_PARALLEL
 #pragma omp parallel for num_threads(CORES) if (MULTIMINSIZE(ncol)) schedule(dynamic, 20)
+#else
 #endif  
   for (int i=0; i<ncol; i++) {
     double 

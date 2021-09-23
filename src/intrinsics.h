@@ -31,29 +31,38 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifdef __MMX__
 #define MMX __MMX__
 #endif
+
 #ifdef __SSE__
 #define SSE __SSE__
 #endif
+
 #ifdef  __SSE2__
 #define SSE2 __SSE2__
 #endif
+
+
 #ifdef  __SSE3__
 #define SSE3 __SSE3__
 #endif
+
 #ifdef  __SSSE3__
 #define SSSE3 __SSSE3__
 #endif
+
 #ifdef  __SSE4A__
 #define SSE4A __SSE4A__
 #endif
+
 #if defined __SSE41__ || defined __SS42__
 #define SSE412 1
 #endif
-//
+#ifdef adsfasdfa
+
 #ifdef __AVX__
 #define AVX __AVX__
 #endif
 
+#endif
 
 
 

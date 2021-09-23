@@ -1,9 +1,9 @@
 /*
- Authors
+ Authors 
  Martin Schlather, schlather@math.uni-mannheim.de
 
 
- Copyright (C) 2018 -- 2019 Martin Schlather
+ Copyright (C)  2021 -- 2021 Martin Schlather
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -17,22 +17,19 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.  
 */
 
+#include <Basic_utils.h>
+#include "def.h"
+#include "options.h"
 
-#ifndef RFxport_H
-#define RFxport_H 1
+int PL=C_PRINTLEVEL,
+  CORES = INITCORES; // no err ok -- do not delete comment
 
-#define UTILSCALLS \
-  CALL(getErrorString);				\
-  CALL(setErrorLoc);				\
-  CALL(getUtilsParam);				\
-  CALL(attachRFoptions);			\
-  CALL(detachRFoptions);			\
-  CALL(relaxUnknownRFoption);			\
-  CALL(scalarX)
-
-
-void includeXport();
-#endif
+const char * prefixlist[prefixN] = 
+{"adoption"}; 
+ 
+globalparam GLOBAL = {
+  adoption_START
+};

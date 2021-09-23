@@ -22,7 +22,7 @@
 }
 \description{
   Technology adoption by households in the United States, 
-  available from \url{ourworldindata.org/technology-adoption},
+  available from \url{https://ourworldindata.org/technology-adoption},
   published by Hannah Ritchie and Max Roser.
 
   NOTE THAT THE DATA ARE PUBLISHED UNDER THE CC-BY LICENCE (2019),
@@ -174,7 +174,7 @@ According to the licence, the references given by Max Roser and co-workers are
     \url{https://robertoigarza.files.wordpress.com/2008/10/rep-television-audience-2010-11-nielsen-2011.pdf}
    
  
-    \item Pew Research Centre \url{http://www.pewinternet.org/datasets}
+    \item Pew Research Centre \url{https://www.pewresearch.org/internet/datasets/}
 
    \item Popp, D. (2010) Exploring links between innovation and
     diffusion: adoption of NO x control technologies at US coal-fired
@@ -189,11 +189,10 @@ According to the licence, the references given by Max Roser and co-workers are
 
     \item Rua, G. (2013) Fixed costs, network effects, and the diffusion
     of container shipping. Federal Reserve Board.
-    \url{as.vanderbilt.edu/econ/sempapers/Rua.pdf}
+    \url{https://cpb-us-west-2-juc1ugur1qwqqqo4.stackpathdns.com/sites.udel.edu/dist/2/425/files/2013/10/GRua_Containers_103113-1ymozt3.pdf}
 
-   
    \item  The New York Times (2008) How Americans spend their money.
-    \url{http://www.nytimes.com/imagepages/2008/02/10/opinion/10op.graphic.ready.html}
+    \url{https://archive.nytimes.com/www.nytimes.com/imagepages/2008/02/10/opinion/10op.graphic.ready.html}
     
     
     \item US Census Bureau's data (1992--2011)

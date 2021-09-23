@@ -25,10 +25,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef kleinkram_rfutils_h
 #define kleinkram_rfutils_h 1
 
-#include <R.h>
-#include <Rinternals.h>
-#include <Basic_utils.h> //#include <Basic_utils.h>
-
 typedef char name_type[][MAXCHAR];
 
 void strcopyN(char *dest, const char *src, int n);
@@ -132,11 +128,11 @@ double *matrixmult(double *m1, double *m2, int dim1, int dim2, int dim3);
 
 
 
-void GetName(SEXP el, char *name, const char * List[], int n,
-	     int defaultvalue, int endvalue, int *ans, int maxlen_ans);
-int GetName(SEXP el, char *name, const char * List[], int n) ;
-int GetName(SEXP el, char *name, const char * List[], int n,
-	    int defaultvalue) ;
+//void GetName(SEXP el, char *name, const char * List[], int n,
+//	     int defaultvalue, int endvalue, int *ans, int maxlen_ans);
+//int GetName(SEXP el, char *name, const char * List[], int n) ;
+//int GetName(SEXP el, char *name, const char * List[], int n,
+//	    int defaultvalue) ;
 
 
 #define SCALAR_PROD(A, B, N, ANS) {			\
@@ -165,9 +161,5 @@ double ownround(double x);
 #define Mod(ZZ, modulus) ((ZZ) - FLOOR((ZZ) / (modulus)) * (modulus))
 double lonmod(double x, double modulus); 
 
-/*
-extern "C" void vectordist(double *v, int *dim, double *dist, int *diag); 
-bool is_diag(double *aniso, int dim);
-*/ 
 
 #endif

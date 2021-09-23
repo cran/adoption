@@ -22,10 +22,6 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 #ifndef scan_public_H
 #define scan_public_H 1
 
-//
-#include <R.h>
-#include <Rinternals.h>
-#include <Rdefines.h>
 
 //extern "C" {
 #ifdef __cplusplus

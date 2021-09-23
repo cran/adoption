@@ -19,17 +19,23 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
+#include <Basic_utils.h>
+#include <General_utils.h>
+#include <zzz_RandomFieldsUtils.h>
 #include "adoption.h"
 #include "options.h"
 #include "xport_import.h"
-#include "error.h"
- 
+#include "extern.h"
+#ifdef CALL
+#undef CALL
+#endif
+#define CALL(what) extern what##_type Ext_##what
+UTILSCALLS;
+
 CALL1(void, getErrorString, errorstring_type, errorstring)
 CALL1(void, setErrorLoc, errorloc_type, errorloc)
 
-const char * prefixlist[prefixN] = 
-{"adoption"}; 
- 
+
 
 // IMPORTANT: all names of general must be at least 3 letters long !!!
 const char *adoption_names[adoptionN] = 
@@ -42,12 +48,7 @@ const char *adoption_names[adoptionN] =
   };
   
 
-int PL=C_PRINTLEVEL,
-  CORES = INITCORES; // no err ok -- do not delete comment
 
-globalparam GLOBAL = {
-  adoption_START
-};
 utilsparam *GLOBAL_UTILS;
 
 

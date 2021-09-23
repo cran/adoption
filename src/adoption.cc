@@ -19,18 +19,22 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.  
 */
  
-#include <Basic_utils.h>  // must be before anything else
 #ifdef DO_PARALLEL
 #include <omp.h>
 #endif
-#include <R.h>
+#include <Basic_utils.h>  
 #include <R_ext/Lapack.h>
+#include <General_utils.h>
+
 #include "adoption.h"
 #include "kleinkram.h"
 #include "intrinsics.h"
 #include "error.h"
 
 /*
+
+install.packages("quadprog")
+
 #if defined AVX
 #define DoublesPerBlock 4
 #define Double __m256d

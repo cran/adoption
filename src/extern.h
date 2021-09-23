@@ -1,9 +1,9 @@
 /*
- Authors
+ Authors 
  Martin Schlather, schlather@math.uni-mannheim.de
 
 
- Copyright (C) 2018 -- 2019 Martin Schlather
+ Copyright (C)  2021 -- 2021 Martin Schlather
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -17,22 +17,16 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.  
 */
+#ifndef adoption_extern_H
+#define adoption_exterm_H 1
+
+extern int PL, CORES;
+extern globalparam GLOBAL;
+
+extern const char * prefixlist[prefixN], **all[prefixN];
+extern int allN[prefixN];
 
 
-#ifndef RFxport_H
-#define RFxport_H 1
-
-#define UTILSCALLS \
-  CALL(getErrorString);				\
-  CALL(setErrorLoc);				\
-  CALL(getUtilsParam);				\
-  CALL(attachRFoptions);			\
-  CALL(detachRFoptions);			\
-  CALL(relaxUnknownRFoption);			\
-  CALL(scalarX)
-
-
-void includeXport();
 #endif
